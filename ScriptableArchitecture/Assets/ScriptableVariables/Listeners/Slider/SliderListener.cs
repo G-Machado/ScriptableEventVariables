@@ -8,7 +8,7 @@ public abstract class SliderListener<T> : MonoBehaviour
     [SerializeField] protected ScriptableVariable<T> variable_current;
     [SerializeField] protected ScriptableVariable<T> variable_total;
     [SerializeField] private bool listenAtAwake;
-    public UnityEvent<T> OnVariableChange;
+    public UnityEvent<T, T> OnVariableChange;
 
     public abstract float GetSliderRatio();
 
@@ -48,6 +48,6 @@ public abstract class SliderListener<T> : MonoBehaviour
     }
     protected virtual void OnVariableValueChange(T value)
     {
-        OnVariableChange.Invoke(value);
+        OnVariableChange.Invoke(variable_current.Value, variable_total.Value);
     }
 }
