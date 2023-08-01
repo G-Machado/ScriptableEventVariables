@@ -7,7 +7,6 @@ public abstract class VariableListener<T> : MonoBehaviour
     [SerializeField] private bool listenAtAwake;
     public UnityEvent<T> OnVariableChange;
 
-
     protected virtual void Awake()
     {
         if (listenAtAwake)

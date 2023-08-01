@@ -1,53 +1,27 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
-public abstract class SliderListener<T> : MonoBehaviour
+[RequireComponent(typeof(Slider))]
+public abstract class SliderListener<T> : VariableListener<T>
 {
-    [SerializeField] protected ScriptableVariable<T> variable_current;
-    [SerializeField] protected ScriptableVariable<T> variable_total;
-    [SerializeField] private bool listenAtAwake;
-    public UnityEvent<T, T> OnVariableChange;
-
-    public abstract float GetSliderRatio();
-
-    protected virtual void Awake()
+    private Slider sliderField;
+    protected override void Awake()
     {
-        if (listenAtAwake)
-            OnVariableValueChange(variable_current.Value);
+        sliderField = GetComponent<Slider>();
+        base.Awake();
     }
 
-    private void OnEnable()
+    protected override void OnVariableValueChange(T value)
     {
-        //
-        if (variable_total != null)
-            variable_total.OnValueChange.AddListener(OnVariableValueChange);
-        else
-            throw new System.NullReferenceException($"No ScriptableVariable current assigned to listener.");
-
-        //
-        if (variable_total != null)
-            variable_total.OnValueChange.AddListener(OnVariableValueChange);
-        else
-            throw new System.NullReferenceException($"No ScriptableVariable total assigned to listener.");
+        base.OnVariableValueChange(value);
+        UpdateSlider(value);
     }
-    private void OnDisable()
-    {
-        //
-        if (variable_current != null)
-            variable_current.OnValueChange.RemoveListener(OnVariableValueChange);
-        else
-            throw new System.NullReferenceException($"No ScriptableVariable current assigned to listener.");
 
-        //
-        if (variable_total != null)
-            variable_total.OnValueChange.RemoveListener(OnVariableValueChange);
-        else
-            throw new System.NullReferenceException($"No ScriptableVariable total assigned to listener.");
-    }
-    protected virtual void OnVariableValueChange(T value)
+    private void UpdateSlider(T value)
     {
-        OnVariableChange.Invoke(variable_current.Value, variable_total.Value);
+        float fValue = 0;
+        if (float.TryParse($"{value}", out fValue))
+            sliderField.value = fValue;
     }
 }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028355, g: 0.22571374, b: 0.30692255, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -238,7 +238,6 @@ GameObject:
   - component: {fileID: 454081897}
   - component: {fileID: 454081896}
   - component: {fileID: 454081895}
-  - component: {fileID: 454081900}
   m_Layer: 0
   m_Name: Rotator
   m_TagString: Untagged
@@ -344,23 +343,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 25.493, y: 0, z: 0}
---- !u!114 &454081900
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454081894}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0de099fc1b4a4476848747e618463f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  variable: {fileID: 11400000, guid: 11eb0b4e7341b4ea08b6cabab89845a0, type: 2}
-  listenAtAwake: 1
-  OnVariableChange:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -787,8 +769,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   variable: {fileID: 11400000, guid: 51a16c99ee8314f1f935ff7c759c5c50, type: 2}
-  fVariable: {fileID: 11400000, guid: 11eb0b4e7341b4ea08b6cabab89845a0, type: 2}
-  counter: {fileID: 11400000, guid: 5c7e1412c632c40428444317df26f6f9, type: 2}
+  colorChangeTrigger: {fileID: 11400000, guid: 39d48dc85191c44a58a22651a3467f27, type: 2}
 --- !u!1 &1721677973
 GameObject:
   m_ObjectHideFlags: 0
@@ -1034,4 +1015,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 615989dbabd6542daa0b341d6fbd9533, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  counter: {fileID: 11400000, guid: 51a16c99ee8314f1f935ff7c759c5c50, type: 2}
+  colorChange: {fileID: 11400000, guid: 39d48dc85191c44a58a22651a3467f27, type: 2}
+  color: {fileID: 11400000, guid: 0e29170025c8fe34e86561b5bfe4e203, type: 2}

@@ -4,21 +4,28 @@ using UnityEngine;
 
 public class CameraColorManager : MonoBehaviour
 {
-    [SerializeField] private IntVariable counter;
+    [SerializeField] private TriggerVariable colorChange;
+    [SerializeField] private ColorVariable color;
 
     private void OnEnable()
     {
-        if(counter)
-            counter.OnValueChange.AddListener(ChangeCameraColor);
+        if(colorChange)
+            colorChange.OnValueChange.AddListener(ChangeCameraColor);
+
+        if(color)
+            color.OnValueChange.AddListener(UpdateCameraColor);
     }
 
     private void OnDisable()
     {
-        if(counter)
-            counter.OnValueChange.RemoveListener(ChangeCameraColor);
+        if(colorChange)
+            colorChange.OnValueChange.RemoveListener(ChangeCameraColor);
+
+        if(color)
+            color.OnValueChange.RemoveListener(UpdateCameraColor);
     }
 
-    public void ChangeCameraColor(int counter)
+    private void ChangeCameraColor(TriggerVariable.trigger t)
     {
         Color newColor = new Color(
             Random.Range(0, 1f),
@@ -27,6 +34,11 @@ public class CameraColorManager : MonoBehaviour
             1f
         );
 
-        Camera.main.backgroundColor = newColor;
+        color.Value = newColor;
+    }
+
+    public void UpdateCameraColor(Color color)
+    {
+        Camera.main.backgroundColor = color;
     }
 }
