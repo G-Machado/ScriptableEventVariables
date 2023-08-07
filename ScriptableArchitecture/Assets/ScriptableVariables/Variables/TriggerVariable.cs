@@ -4,6 +4,4 @@ using UnityEngine;
 public class TriggerVariable : ScriptableVariable<TriggerVariable.trigger>
 {
     public class trigger{ }
-}
-
-
+}  

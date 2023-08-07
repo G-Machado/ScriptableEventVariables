@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b8494188524045838e1c3acb6b39ccd, type: 3}
   m_Name: OnColorChange
   m_EditorClassIdentifier: 
+  runtimeValue: 1
   OnValueChange:
     m_PersistentCalls:
       m_Calls: []

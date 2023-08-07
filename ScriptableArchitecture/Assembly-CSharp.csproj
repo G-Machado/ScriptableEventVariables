@@ -57,14 +57,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\ScriptableVariables\Listeners\Slider\IntSliderListener.cs" />
-    <Compile Include="Assets\ScriptableVariables\Listeners\Core\IntListener.cs" />
+    <Compile Include="Assets\ScriptableVariables\Listeners\Base\IntListener.cs" />
     <Compile Include="Assets\ScriptableVariables\Variables\BoolVariable.cs" />
     <Compile Include="Assets\ScriptableVariables\Variables\ScriptableVariable.cs" />
     <Compile Include="Assets\ScriptableVariables\Listeners\Animator\IntAnimListener.cs" />
     <Compile Include="Assets\ScriptableVariables\Listeners\UGUI\StringTextListener.cs" />
     <Compile Include="Assets\ScriptableArchitecture\Scripts\Events\GlobalEventsManager.cs" />
     <Compile Include="Assets\ScriptableVariables\Variables\FloatVariable.cs" />
-    <Compile Include="Assets\ScriptableVariables\Listeners\Core\BoolListener.cs" />
+    <Compile Include="Assets\ScriptableVariables\Listeners\Base\BoolListener.cs" />
     <Compile Include="Assets\ScriptableArchitecture\Scripts\Utils\Singleton.cs" />
     <Compile Include="Assets\ScriptableVariables\Listeners\Slider\FloatSliderListener.cs" />
     <Compile Include="Assets\ScriptableVariables\Listeners\UGUI\FloatTextListener.cs" />
@@ -76,20 +76,20 @@
     <Compile Include="Assets\ScriptableVariables\Listeners\UGUI\BoolTextListener.cs" />
     <Compile Include="Assets\ScriptableVariables\Variables\VariableSO.cs" />
     <Compile Include="Assets\ScriptableVariables\Variables\IntVariable.cs" />
-    <Compile Include="Assets\ScriptableVariables\Listeners\Core\VariableListener.cs" />
-    <Compile Include="Assets\ScriptableVariables\Listeners\Core\DoubleListener.cs" />
+    <Compile Include="Assets\ScriptableVariables\Listeners\Base\VariableListener.cs" />
+    <Compile Include="Assets\ScriptableVariables\Listeners\Base\DoubleListener.cs" />
     <Compile Include="Assets\ScriptableVariables\Variables\DoubleVariable.cs" />
     <Compile Include="Assets\ScriptableVariables\Listeners\UGUI\TextListener.cs" />
-    <Compile Include="Assets\ScriptableVariables\Listeners\Core\ColorListener.cs" />
+    <Compile Include="Assets\ScriptableVariables\Listeners\Base\ColorListener.cs" />
     <Compile Include="Assets\ScriptableArchitecture\Scripts\Events\ScriptableEvent.cs" />
     <Compile Include="Assets\ScriptableVariables\Variables\ColorVariable.cs" />
-    <Compile Include="Assets\ScriptableVariables\Listeners\Core\StringListener.cs" />
+    <Compile Include="Assets\ScriptableVariables\Listeners\Base\StringListener.cs" />
     <Compile Include="Assets\ScriptableVariables\Listeners\Animator\FloatAnimListener.cs" />
     <Compile Include="Assets\ScriptableVariables\Listeners\UGUI\IntTextListener.cs" />
-    <Compile Include="Assets\ScriptableVariables\Listeners\Core\TriggerListener.cs" />
+    <Compile Include="Assets\ScriptableVariables\Listeners\Base\TriggerListener.cs" />
     <Compile Include="Assets\ScriptableVariables\Variables\StringVariable.cs" />
     <Compile Include="Assets\ScriptableVariables\Listeners\Slider\SliderListener.cs" />
-    <Compile Include="Assets\ScriptableVariables\Listeners\Core\FloatListener.cs" />
+    <Compile Include="Assets\ScriptableVariables\Listeners\Base\FloatListener.cs" />
     <Compile Include="Assets\ScriptableArchitecture\Scripts\Events\EventsTable.cs" />
   </ItemGroup>
   <ItemGroup>
